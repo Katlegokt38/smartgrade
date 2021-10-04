@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="ui inverted top fixed menu">
+  <div class="ui container">
+    <a routerLink="/" class="header item">
+      <img class="ui mini image" src="../assets/favicon.png"> <!-- Changed to SmartGrade logo-->
+      &nbsp;
+     SmartGrade
+    </a>
+    <a class="item" *ngIf="!isAuthenticated" routerLink="/login">Login</a>
+    <!-- <a id="messages-button" class="item" *ngIf="isAuthenticated" routerLink="/messages"><i aria-hidden="true" class="mail outline icon"></i>Messages</a> Can change to Notifications?-->
+    <!-- <a id="profile-button" class="item" *ngIf="isAuthenticated" routerLink="/profile">Profile</a> Can remove it later as no Profile is needed for a user  -->
+
+    <a id="Student-panel" class="item" *ngIf="isAuthenticated && showStudent" routerLink="/student" >Student</a>
+    <a id="Educator-panel" class="item" *ngIf="isAuthenticated && showEducator" routerLink="/educator" >Educator</a>
+    <a id="Admin-panel" class="item" *ngIf="isAuthenticated && showAdmin" (click)="admin()" >Admin</a> <!-- We can maybe also hide this tab by checking instead of only isAuthenticated check isAdmin(), same with the lecturer and student tabs-->
+    <a id="logout-button" class="item" *ngIf="isAuthenticated" (click)="logout()">Logout</a>
+  </div>
+</div>
+
+<div class="ui text container" style="margin-top: 7em;">
+  <router-outlet></router-outlet>
+</div>
