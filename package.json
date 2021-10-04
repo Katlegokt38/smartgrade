@@ -1,0 +1,55 @@
+{
+  "name": "smartgrade-server",
+  "version": "0.1.0",
+  "description": "NodeJS server with Express, Sequelize and PostgreSQL",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "cd client && ng serve",
+    "test": "mocha --reporter spec \"test/**/**/*.js\"",
+    "dev": "nodemon ./server.js",
+    "heroku-postbuild": "npm install",
+    "heroku-prebuild": "cd client && npm install"
+  },
+  "private": true,
+  "dependencies": {
+    "@okta/jwt-verifier": "^1.0.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.2",
+    "chai-as-promised": "^7.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-bearer-token": "^2.4.0",
+    "express-validator": "^6.6.1",
+    "fast-csv": "^4.3.5",
+    "file-saver": "^2.0.2",
+    "httpie": "^1.1.2",
+    "json2csv": "^5.0.4",
+    "mathjs": "^8.0.1",
+    "mongoose": "^5.10.15",
+    "mongoose-findorcreate": "^3.0.0",
+    "njwt": "^1.0.0",
+    "nodemon": "^2.0.5",
+    "path": "^0.12.7",
+    "pg": "^8.4.2",
+    "pg-hstore": "^2.3.3",
+    "rxjs": "^6.5.4",
+    "sequelize": "^6.3.5",
+    "sequelize-auto": "^0.6.2",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.1",
+    "chai": "^4.2.0",
+    "enhanced-resolve": "^5.0.0",
+    "jest": "^26.6.1",
+    "mocha": "^8.2.1",
+    "node-mocks-http": "^1.9.0",
+    "supertest": "^5.0.0"
+  },
+  "engines": {
+    "node": "^12.18.4",
+    "npm": "^6.14.6"
+  }
+}
